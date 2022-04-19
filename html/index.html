@@ -22,7 +22,7 @@
 
 <p>To install this bookmarklet <b>Grab this icon and drop it in the bookmarks of your browser</b></p>
 
-<p><a href='Javascript:void function(){let b=RegExp("Y/N","ig"),c=prompt("Modify with:"," "),a=document.getElementById("workskin").innerHTML;a=a.replaceAll(b,c);document.getElementById("workskin").innerHTML=a}();'><span class="fas fa-book-reader fifty"></span><span class="hide">Y/N Replacer</span></a></p>
+<p><a href='Javascript:void function(){let b=RegExp(/[\[\(]?Y\/N(?!\/n)[\]\)]?/,"ig"),c=prompt("Modify with:"," "),a=document.getElementById("workskin").innerHTML;a=a.replaceAll(b,c);document.getElementById("workskin").innerHTML=a}();'><span class="fas fa-book-reader fifty"></span><span class="hide">Y/N Replacer</span></a></p>
 
 <p><b>It should have created a new Bookmark</b> called <i>"Y/N Replacer"</i>. <br>Check if it's working now!
 	<ul><li>Click on the bookmark while being on this page</li>
