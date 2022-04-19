@@ -7,7 +7,13 @@ function() {
     //popup
     var cambiaIn = prompt("Modify with:", "");
     //changes the text!
+    if (cambiaIn!=""){
     var work = document.getElementById("workskin").innerHTML;
     work = work.replaceAll(daCambiare, cambiaIn);
     document.getElementById("workskin").innerHTML = work;
+    }
 }();
+
+
+
+javascript: void function(){var a=window.getSelection().toString();a=new RegExp(a,"ig");var c=prompt("Modify with:","");if(""!=c){var b=document.getElementById("workskin").innerHTML;b=b.replaceAll(a,c);document.getElementById("workskin").innerHTML=b}}();
