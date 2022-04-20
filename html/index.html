@@ -13,6 +13,10 @@
 		.hide {
 			display:  none;
 		}
+		textarea {
+			resize: none;
+			font-family: monospace;
+		}
 	</style>
 </head>
 <body>
@@ -24,7 +28,20 @@
 
 <p><a href='Javascript:void function(){let b=RegExp(/[\[\(]?Y\/N(?!\/n)[\]\)]?/,"ig"),c=prompt("Modify with:"," "),a=document.getElementById("workskin").innerHTML;a=a.replaceAll(b,c);document.getElementById("workskin").innerHTML=a}();'><span class="fas fa-book-reader fifty"></span><span class="hide">Y/N Replacer</span></a></p>
 
-<p><b>It should have created a new Bookmark</b> called <i>"Y/N Replacer"</i>. <br>Check if it's working now!
+<p><b>It should have created a new Bookmark</b> called <i>"Y/N Replacer"</i>. </p>
+
+<p>On certain mobile phone browsers you won't be able to drag & drop the icon, so the installation will be different and you'll need to create manually the bookmark and copy/paste the code in the url field:</p>
+<textarea readonly id="scripttocopy">Javascript:void function(){let b=RegExp(/[\[\(]?Y\/N(?!\/n)[\]\)]?/,"ig"),c=prompt("Modify with:",""),a=document.getElementById("workskin").innerHTML;a=a.replaceAll(b,c);document.getElementById("workskin").innerHTML=a}();
+</textarea>
+<button onclick="copyText()">Copy</button>
+<span id="feedback"></span>
+
+Now create a new bookmark in your browser and paste the code in the URL field. (Every browser is different here, so I can't do a proper explaination step by step. reisling has made an incredibly exhaustive guide on this <a href="https://archiveofourown.org/works/33825019#bookmarks">in their own bookmarklet</a>)
+
+
+<h2>Once installed</h2>
+
+<p>Check if it's working now!
 	<ul><li>Click on the bookmark while being on this page</li>
 		<li>it should show you a popup with 'Modify With:', insert your nickname!</li>
 		<li>now see if in the following text the y/n have been modified correctly:</li>
@@ -44,5 +61,20 @@
 
 
 </div>
+<script type="text/javascript">
+function copyText() {
+  /* Get the text field */
+  var copyText = document.getElementById("scripttocopy");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+
+  /* Alert the copied text */
+  document.getElementById('feedback').innerHTML = "Copied!";
+}</script>
 </body>
 </html>
