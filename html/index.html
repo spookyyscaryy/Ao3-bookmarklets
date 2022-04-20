@@ -8,10 +8,11 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 	<style>
 		.fifty {
-			font-size:  500%;
+			font-size:  200%;
+
 		}
-		.hide {
-			display:  none;
+		.center {
+			text-align:  center;
 		}
 		textarea {
 			resize: none;
@@ -24,22 +25,13 @@
 <h2>Y/N Replacer for Ao3</h2>
 <p>More about this bookmarklet can be found <a href="https://archiveofourown.org/works/34796935">here</a></p>
 
-<p>To install this bookmarklet <b>Grab this icon and drop it in the bookmarks of your browser</b></p>
-
-<p><a href='Javascript:void function(){let b=RegExp(/[\[\(]?Y\/N(?!\/n)[\]\)]?/,"ig"),c=prompt("Modify with:"," "),a=document.getElementById("workskin").innerHTML;a=a.replaceAll(b,c);document.getElementById("workskin").innerHTML=a}();'><span class="fas fa-book-reader fifty"></span><span class="hide">Y/N Replacer</span></a></p>
+<p>To install this bookmarklet <b>Grab this link and drop it in the bookmarks of your browser</b></p>
 
 
-<a href='Javascript:void function(){let b=RegExp(/[\[\(]?Y\/N(?!\/n)[\]\)]?/,"ig"),c=prompt("Modify with:"," "),a=document.getElementById("workskin").innerHTML;a=a.replaceAll(b,c);document.getElementById("workskin").innerHTML=a}();'>Y/N Replacer</a>
+<p class="center"><a href='Javascript:void function(){let b=RegExp(/[\[\(]?Y\/N(?!\/n)[\]\)]?/,"ig"),c=prompt("Modify with:"," "),a=document.getElementById("workskin").innerHTML;a=a.replaceAll(b,c);document.getElementById("workskin").innerHTML=a}();' class="fifty">Y/N Replacer</a> <span class='arrow'><svg width="11px" height="10px" viewBox="0 0 11 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    <g id="left-arrow" transform="translate(5.500000, 5.000000) scale(-1, 1) translate(-5.500000, -5.000000) ">        <path d="M1.77635684e-14,5 L9,5" id="rod" stroke="#000000" stroke-width="2"></path>        <path d="M11,5 L6,0.5 L6,9.5 L11,5 Z" id="point" fill="#000000"></path>    </g></svg></span> Drag this!</p>
 
 <p><b>It should have created a new Bookmark</b> called <i>"Y/N Replacer"</i>. </p>
 
-<p>On certain mobile phone browsers you won't be able to drag & drop the icon, so the installation will be different and you'll need to create manually the bookmark and copy/paste the code in the url field:</p>
-<textarea readonly id="scripttocopy">Javascript:void function(){let b=RegExp(/[\[\(]?Y\/N(?!\/n)[\]\)]?/,"ig"),c=prompt("Modify with:",""),a=document.getElementById("workskin").innerHTML;a=a.replaceAll(b,c);document.getElementById("workskin").innerHTML=a}();
-</textarea>
-<button onclick="copyText()">Copy</button>
-<span id="feedback"></span>
-
-<p>Now create a new bookmark in your browser and paste the code in the URL field. (Every browser is different here, so I can't do a proper explaination step by step. reisling has made an incredibly exhaustive guide on this <a href="https://archiveofourown.org/works/33825019#bookmarks">in their own bookmarklet</a>)</p>
 
 
 <h2>Once installed</h2>
@@ -58,6 +50,17 @@
 
 <p>Yay!</p>
 <p>Reminder that this works ONLY on ao3 and it works only in stories (not in tags or summaries) and it works only with y/n, [y/n] and (y/n) (not with yn or other combinations of characters.)</p>
+
+
+<h2>If you have problems dragging and dropping it</h2>
+
+<p>On certain mobile phone browsers you won't be able to drag & drop the icon, so the installation will be different and you'll need to create manually the bookmark and copy/paste the code in the url field:</p>
+<textarea readonly id="scripttocopy">Javascript:void function(){let b=RegExp(/[\[\(]?Y\/N(?!\/n)[\]\)]?/,"ig"),c=prompt("Modify with:",""),a=document.getElementById("workskin").innerHTML;a=a.replaceAll(b,c);document.getElementById("workskin").innerHTML=a}();
+</textarea>
+<button onclick="copyText()">Copy</button>
+<span id="feedback"></span>
+
+<p>Now create a new bookmark in your browser and paste the code in the URL field. (Every browser is different here, so I can't do a proper explaination step by step. reisling has made an incredibly exhaustive guide on this <a href="https://archiveofourown.org/works/33825019#bookmarks">in their own bookmarklet</a>)</p>
 
 <p>Electricalice</p>
 </p>
